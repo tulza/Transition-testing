@@ -6,7 +6,9 @@ const Navigation = () => {
     <>
       <div className="absolute flex w-full justify-center gap-8 p-8">
         <NavButton name="/" />
-        <NavButton name="home" />
+        <NavButton name="main" />
+        <NavButton name="about" />
+        <NavButton name="contacts" />
       </div>
     </>
   );

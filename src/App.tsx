@@ -1,21 +1,13 @@
-import Navigation from "@components/Navigation";
-import Template from "@components/pages/Template";
 import "@styles/styles.css";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  Navigate,
-} from "react-router-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+import Navigation from "@components/Navigation";
+import AnimatedRoute from "@components/AnimatedRoute";
 
 function App() {
   return (
-    <Router basename="/vite-react-ts-template">
+    <Router basename="/Transition-testing">
       <Navigation />
-      <Routes>
-        <Route path="/home" element={<Template />} />
-        <Route path="/" element={<Navigate to="/home" />} />
-      </Routes>
+      <AnimatedRoute />
     </Router>
   );
 }
