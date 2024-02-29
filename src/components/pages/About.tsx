@@ -1,4 +1,4 @@
-import TransitionAnim from "@components/TransitionAnim";
+import TransitionAnim from "@components/Transitions/TransitionAnim";
 
 const About = () => {
   return (
