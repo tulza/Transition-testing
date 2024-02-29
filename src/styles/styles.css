@@ -22,3 +22,10 @@ html {
   color: var(--text);
   overflow: hidden;
 }
+
+.colSplitMask {
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-image: url(/src/assets/slideMask.svg);
+  mask-image: url(/src/assets/slideMask.svg);
+  mask-size: cover;
+}

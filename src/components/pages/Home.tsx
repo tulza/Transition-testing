@@ -1,5 +1,4 @@
 import TransitionAnim from "@components/TransitionAnim";
-import React from "react";
 
 const Home = () => {
   return (
