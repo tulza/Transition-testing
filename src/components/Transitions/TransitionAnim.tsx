@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import React from "react";
 import SlideInTransition from "./SlideInTransition";
 import ColSplitRounded from "./ColSplitRounded";
@@ -7,17 +6,17 @@ import TestAnim from "./TestAnim";
 
 type TransitionTypes = {
   children: React.ReactNode;
-  type?: "default" | "ColSplit" | "ColSplit2";
+  type?: "default" | "ColSplit" | "ColSplit2" | "test";
 };
 
-const TransitionAnim = ({ children, type = "test1" }: TransitionTypes) => {
+const TransitionAnim = ({ children, type = "ColSplit2" }: TransitionTypes) => {
   return (
     <>
       {children}
-      {type == "default" && <SlideInTransition />}
-      {type == "ColSplit" && <ColSplitRounded />}
-      {type == "ColSplit2" && <ColSplit />}
-      {type == "test1" && <TestAnim />}
+      {type == "default" && <SlideInTransition className="z-[9999]" />}
+      {type == "ColSplit" && <ColSplitRounded className="z-[9999]" />}
+      {type == "ColSplit2" && <ColSplit className="z-[9999]" />}
+      {type == "test" && <TestAnim className="z-[9999]" />}
     </>
   );
 };

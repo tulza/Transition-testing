@@ -4,8 +4,12 @@
 
 :root {
   --element: hsl(209, 23%, 22%);
-  --background: var(--gray);
+  --background: var(--element);
   --text: hsl(0, 0%, 100%);
+
+  --red-bg: rgb(215, 160, 130);
+  --blue-bg: rgb(160, 160, 215);
+  --green-bg: rgb(160, 215, 160);
 
   --white: #ffffff;
   --black: #1c1e1f;
@@ -21,6 +25,10 @@ html {
   background-color: var(--background);
   color: var(--text);
   overflow: hidden;
+}
+
+.fancyFont {
+  font-family: "Playfair Display", serif;
 }
 
 .colSplitMask {

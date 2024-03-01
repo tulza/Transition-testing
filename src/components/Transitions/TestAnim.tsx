@@ -1,7 +1,7 @@
+import clsx from "clsx";
 import { motion } from "framer-motion";
-import React from "react";
 
-const TestAnim = () => {
+const TestAnim = ({ className }: { className?: string }) => {
   const blockPerRow = 20;
   const blockPerCol = Math.ceil((innerHeight / innerWidth) * blockPerRow);
   const duration = 0.5;
@@ -9,7 +9,10 @@ const TestAnim = () => {
   return (
     <>
       <div
-        className=" pointer-events-none fixed left-0 top-0 grid h-[100vh] w-[100vw] place-items-center items-start border border-red-600"
+        className={clsx(
+          "pointer-events-none fixed left-0 top-0 grid h-[100vh] w-[100vw] place-items-center items-start",
+          `${className}`,
+        )}
         style={{ gridTemplateColumns: `repeat(${blockPerRow},1fr)` }}
       >
         {new Array(blockPerRow).fill("").map((_, i) => (
@@ -21,7 +24,10 @@ const TestAnim = () => {
         ))}
       </div>
       <div
-        className=" pointer-events-none fixed left-0 top-0 grid h-[100vh] w-[100vw] place-items-center items-start border border-red-600"
+        className={clsx(
+          "pointer-events-none fixed left-0 top-0 grid h-[100vh] w-[100vw] place-items-center items-start",
+          `${className}`,
+        )}
         style={{ gridTemplateColumns: `repeat(${blockPerRow},1fr)` }}
       >
         {new Array(blockPerRow).fill("").map((_, i) => (
